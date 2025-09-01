@@ -20,14 +20,14 @@ def days_in_month(year, month):
 def day_of_year(year, month, day):
 	days = 0
 	for m in range(1, month):
-		# ...
-		# if statement
-			# ...
+		md = days_in_month(year, m)
+		if md == None:
+			return None
 		days += md
 	md = days_in_month(year, month)
 	if day >= 1 and day <= md:
-		# ...
+		return days + day
 	else:
-		# ...
+		return None
 
 print(day_of_year(2000, 12, 31))
