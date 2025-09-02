@@ -17,16 +17,16 @@ def days_in_month(year, month):
 		res = 29
 	return res
 
-def day_of_year(year, month, day):
-	days = 0
-	for m in range(1, month):
-		md = days_in_month(year, m)
-		if md == None:
+def day_of_year(year, month, day):	#calculates the day number of the year
+	days = 0						#starts at 0
+	for m in range(1, month):		#adds the days in each month before the current month
+		md = days_in_month(year, m)	#gets the number of days in month m
+		if md == None:				#invalid month
 			return None
-		days += md
-	md = days_in_month(year, month)
-	if day >= 1 and day <= md:
-		return days + day
+		days += md					#adds the number of days in month m to the total
+	md = days_in_month(year, month)	#gets the number of days in the current month
+	if day >= 1 and day <= md:		#checks if the day is valid
+		return days + day			#adds the days in the current month to the total and returns it
 	else:
 		return None
 
