@@ -8,7 +8,7 @@ student_scores = {"Alice": 85,
 print("Student names:", student_scores.keys())
 
 #Print all values
-print("Scores:", student_scsores.values())
+print("Scores:", student_scores.values())
 
 #Update scores
 student_scores["Bob"] = 95
