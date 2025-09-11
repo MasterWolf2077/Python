@@ -20,4 +20,4 @@ def print_number(num):
         print(line)
 
 # Example output
-print_number(12)
+print_number(1234567890)
